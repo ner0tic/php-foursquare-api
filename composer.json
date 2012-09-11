@@ -1,0 +1,25 @@
+{
+    "name": "ner0tic/foursquare-api",
+    "type": "library",
+    "description": "Foursquare API v2 client",
+    "homepage": "https://github.com/ner0tic/php-github-api",
+    "keywords": ["foursquare", "api", "venue", "checkin"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Durost",
+            "homepage": "http://daviddurost.net"
+        }
+    ],
+    "require": {
+        "php":                ">=5.3.2",
+        "ext-curl":           "*",
+        "kriswallsmith/buzz": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Foursquare": "lib/" }
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
