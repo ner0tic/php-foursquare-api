@@ -33,7 +33,7 @@
       if($this->hasMenu())
         return new Menu($this->client);
       else
-        reurn null;
+        return null;
     }
     public function hasMenu() {
       return false; // TODO!
