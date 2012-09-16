@@ -61,15 +61,17 @@
      * @param array $options
      * @param \Buzz\Browser $browser
      */
-    public function __contruct(array $options = array(), Browser $browser = null) {
+    public function __construct(array $options = array(), Browser $browser = null) {
       $this->options = array_merge($this->options, $options);
       $this->browser = $browser ?: new Browser(new Curl());
       
       $this->browser->getClient()->setTimeout($this->options['timeout']);
+      $this->browser->getClient()->setVerifyPeer(true); 
+      $this->browser->getClient()->setOption('CURLOPT_SSL_VERIFYHOST', 2);
       /**
-       * @todo fix this makes ssl pointless...
+       * File: CAfile.pem contains a mashed certificate of googleapis.com and foursquare.com
        */
-      $this->browser->getClient()->setVerifyPeer(false); 
+      $this->browser->getClient()->setOption('CURLOPT_CAINFO', __DIR__.'/Certificates/CAfile.pem');
     }
 
     /**

@@ -11,3 +11,8 @@ web/bundles/*
 
 # Configuration files
 app/config/parameters.ini
+/php-foursquare-api/nbproject/private/
+/nbproject/private/
+/lib/Foursquare/HttpClient/Certificates/foursquare.com
+/lib/Foursquare/HttpClient/Certificates/googleapis.com
+/lib/Foursquare/HttpClient/Certificates/ca_mashup.sh
