@@ -14,10 +14,11 @@
     ],
     "require": {
         "php":                ">=5.3.2",
-        "ext-curl":           "*",
-        "kriswallsmith/buzz": "dev-master"
+        "ner0tic/php-api-core": "*"
     },
     "autoload": {
         "psr-0": { "Foursquare\\": "lib/" }
     },
+
+    "minimum-stability": "dev"
 }

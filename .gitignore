@@ -5,14 +5,17 @@ app/bootstrap*
 vendor/*
 */logs/*
 */cache/*
-web/uploads/*
-web/bundles/*
-*~
+web/*
 
 # Configuration files
 app/config/parameters.ini
-/php-foursquare-api/nbproject/private/
-/nbproject/private/
-/lib/Foursquare/HttpClient/Certificates/foursquare.com
-/lib/Foursquare/HttpClient/Certificates/googleapis.com
-/lib/Foursquare/HttpClient/Certificates/ca_mashup.sh
+app/config/parameters.yml
+
+# Composer
+composer.phar
+composer.lock
+
+# Misc
+*~
+nbproject/*
+/composer.phar
