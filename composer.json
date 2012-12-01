@@ -19,9 +19,5 @@
     "autoload": {
         "psr-0": { "Foursquare\\": "lib/" }
     },
-<<<<<<< HEAD
-
     "minimum-stability": "dev"
-=======
->>>>>>> 7fb3d501841755e9b74890981263d6e94c219c9c
 }
