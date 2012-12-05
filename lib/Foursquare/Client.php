@@ -38,7 +38,7 @@
               $api = new Api\Updates($this);
               break;
             case 'photos':
-              $api = newApi\Photos($this);
+              $api = new Api\Photos($this);
               break;
             case 'settings':
               $api = new Api\Settings($this);
@@ -56,7 +56,7 @@
               $api = new Api\Pages($this);
               break;
             case 'pageUpdates':
-              $api = new Api\PageUpdatea($this);
+              $api = new Api\PageUpdates($this);
               break;
             case 'multi':
               $api = new Api\Multi($this);
