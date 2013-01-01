@@ -1,9 +1,9 @@
 <?php
 namespace Foursquare;
 
-use Core\Client;
+use Core\Client as BaseClient;
   
-class Client extends Client 
+class Client extends BaseClient 
 {
     /**
        * Api
