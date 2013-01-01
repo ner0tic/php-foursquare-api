@@ -30,11 +30,11 @@ foreach($checkins as $checkin) {
   echo $checkin; // $checkin->timestamp.' '.$checkin->getVenue()->getName()
 }
 ```
-Api's to choose from
-- user
+Api's to choose from:
+- users
 - checkins
 - venues
-- venuegroups
+- venue groups
 - tips
 - lists
 - updates
@@ -44,7 +44,7 @@ Api's to choose from
 - campaigns
 - events
 - pages
-- pageUpdates
+- page updates
 - multi
 
 To set the auth settings manually
@@ -57,7 +57,7 @@ $fs->setAuthUrlToken($token);
 $fs->setAuthHttpToken($token);
 ```
 
-If you have api keys to use, mash them into a [pem](google.com) file and 
+If you have api keys to use, mash them into a [pem](http://www.fileinfo.com/extension/pem) file and 
 set the `certificate` option to the path  of the file.
 ```php
 $client->setOption('certificate', $pem_file);
@@ -69,5 +69,6 @@ $result = $api->get($endpoint, $parameters, $request_options);
 ```
 ToDo
 =================
+Laundry List
 - DI to access config.yml for variables
-- 
+

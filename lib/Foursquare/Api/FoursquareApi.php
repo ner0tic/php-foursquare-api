@@ -6,7 +6,7 @@ use Foursquare\Client;
 
 class FoursquareApi extends AbstractApi
 {
-  public function __contruct(Client $client = null) {
+  public function __construct(Client $client = null) {
     $this->client = $client instanceof Client ? $client : new Client();
     
     $this->client->setOption('url', 'https://api.foursquare.com/:path');
