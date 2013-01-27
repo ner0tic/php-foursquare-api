@@ -13,4 +13,9 @@ class FoursquareApi extends AbstractApi
         $this->client->setOption( 'url', 'https://api.foursquare.com/:path' );
         $this->client->setOption( 'certificate', false ); // 'Resources/config/certificate.pem' );
     }
+    
+    public function getAuthClientId()
+    {
+        return $this->client->getClientId();
+    }
 }
