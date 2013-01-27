@@ -1,10 +1,4 @@
 <?php
 namespace Foursquare\Api;
 
-class Multi extends FoursquareApi
-{
-    public function get( $id, $params = array(), $requestOpts = array() )
-    {
-        return $this->get( $id, $params, $requestOpts );
-    }
-}
+class Multi extends FoursquareApi {}

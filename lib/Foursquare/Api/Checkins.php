@@ -3,11 +3,6 @@ namespace Foursquare\Api;
 
 class Checkins extends FoursquareApi 
 {
-    public function get( $id, $params = array(), $requestOpts = array() )
-    {
-        return $this->get( 'checkins/', array( $id ), $params, $requestOpts );
-    }
-
     public function recent( $params = array(), $requestOpts() = array() )
     {
         $keys = array( 'll', 'limit', 'afterTimestamp' );
