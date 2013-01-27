@@ -1,9 +1,7 @@
 <?php
 namespace Foursquare\Api;
 
-use \Core\AbstractApi;
-
-class Users extends AbstractApi
+class Users extends FoursquareApi
 {
   /**
    * Return array of either the given user id, the currently logged in user
