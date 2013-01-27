@@ -1,12 +1,10 @@
 <?php
 namespace Foursquare\Api;
 
-use \Core\AbstractApi;
-
-class Campaigns extends AbstractApi
+class Campaigns extends FoursquareApi
 {
-  public function get($id, $requestOpts = array())
-  {
-    return $this->get($id, $requestOpts);
-  }
+    public function get( $id, $params = array(), $requestOpts = array() )
+    {
+        return $this->get( $id, $params, $requestOpts );
+    }
 }

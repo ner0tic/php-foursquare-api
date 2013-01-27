@@ -10,19 +10,19 @@ class Users extends FoursquareApi
    * @param array $requestOpts http query parameters
    * @return type
    */
-  public function get($id = null, $requestOpts = array())
+  public function get( $id = null, $params = array(), $requestOpts = array() )
   {
-    if(null === $id)
+    if( null === $id )
     {
-      if(null === $this->getAuthClientId())
+      if( null === $this->getAuthClientId() )
       {
-        return $this->get('users/self', $requestOpts);
+        return $this->get( 'users/self', $params, $requestOpts );
       }
       
-      return $this->get('users/'.$this->getAuthClientId(), $requestOpts);      
+      return $this->get( 'users/'.$this->getAuthClientId(), $params, $requestOpts );      
     }
             
-    return $this->get('users/'.$id, $requestOpts);
+    return $this->get( 'users/'.$id, $params, $requestOpts );
   }
   
   /**
@@ -31,20 +31,20 @@ class Users extends FoursquareApi
    * @param integer $limit
    * @return type
    */
-  public function getRecentCheckins($id = null, $limit = 10)
+  public function getRecentCheckins( $id = null, $limit = 10 )
   {
-    $requestOpts = array('limit' => $limit);
-    if(null === $id)
+    $requestOpts = array( 'limit' => $limit );
+    if( null === $id )
     {
-      if(null === $this->getAuthClientId())
+      if( null === $this->getAuthClientId() )
       {
-        return $this->get('users/self/checkins', $requestOpts);
+        return $this->get( 'users/self/checkins', $requestOpts );
       }
       
-      return $this->get('users/'.$this->getAuthClientId().'/checkins', $requestOpts);      
+      return $this->get( 'users/'.$this->getAuthClientId().'/checkins', array(), $requestOpts );      
     }
             
-    return $this->get('users/'.$id.'/checkins', $requestOpts);
+    return $this->get( 'users/'.$id.'/checkins', array(), $requestOpts );
   }
   
   /**

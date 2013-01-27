@@ -1,17 +1,15 @@
 <?php
 namespace Foursquare\Api;
 
-use \Core\AbstractApi;
-
-class Venue extends AbstractApi
+class Venue extends FoursquareApi
 {
-  public function get($id, $requestOpts = array())
-  {
-    return $this->get($id, $requestOpts);
-  }
+    public function get( $id, $params = array(), $requestOpts = array() )
+    {
+        return $this->get( $id, $params, $requestOpts );
+    }
   
-  public function getCategories($id, $requestOpts = array())
-  {
-    return $this->get('venues/categories');
-  }
+    public function getCategories( $id, $params = array(), $requestOpts = array() )
+    {
+        return $this->get( 'venues/categories', $params, $requestOpts );
+    }
 }

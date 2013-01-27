@@ -1,20 +1,18 @@
 <?php
 namespace Foursquare\Api;
 
-use Core\AbstractApi;
-
-class Checkins extends AbstractApi 
+class Checkins extends FoursquareApi 
 {
-    public function get($id, $requestOpts = array())
+    public function get( $id, $params = array(), $requestOpts = array() )
     {
-      return $this->get('checkins/', array($id), $requestOpts);
+        return $this->get( 'checkins/', array( $id ), $params, $requestOpts );
     }
 
-    public function recent($params = array(), $requestOpts() = array() )
+    public function recent( $params = array(), $requestOpts() = array() )
     {
-      $keys = array( 'll', 'limit', 'afterTimestamp' );
-      $path = 'checkins/recent/' . http_build_query(array_intersect_key($params, $keys));
+        $keys = array( 'll', 'limit', 'afterTimestamp' );
+        $path = 'checkins/recent/' . http_build_query( array_intersect_key( $params, $keys ) );
 
-      return $this->get($path, null, $requestOpts);
+      return $this->get( $path, null, $requestOpts );
     }
 }

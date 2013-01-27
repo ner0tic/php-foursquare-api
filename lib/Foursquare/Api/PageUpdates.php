@@ -1,12 +1,10 @@
 <?php
 namespace Foursquare\Api;
 
-use \Core\AbstractApi;
-
-class PageUpdates extends AbstractApi
+class PageUpdates extends FoursquareApi
 {
-  public function get($id, $requestOpts = array())
-  {
-    return $this->get($id, $requestOpts);
-  }
+    public function get( $id, $params = array(), $requestOpts = array() )
+    {
+        return $this->get( $id, $params, $requestOpts );
+    }
 }
