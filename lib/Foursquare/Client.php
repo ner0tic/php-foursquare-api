@@ -5,6 +5,8 @@ use Core\Client as BaseClient;
   
 class Client extends BaseClient 
 {
+    protected $client;
+    
     public function __constructor( Client $client = null )
     {
         $this->client = $client instanceof Client ? $client : new Client();
