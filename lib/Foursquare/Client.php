@@ -71,4 +71,9 @@ class Client extends BaseClient
         
         return $this->apis[ $name ];
       }
+      
+      public function setOption( $name, $value )
+      {
+          return parent::setOption( $name, $value );
+      }
   }
