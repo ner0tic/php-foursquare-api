@@ -16,6 +16,6 @@ class FoursquareApi extends AbstractApi
     
     public function getAuthClientId()
     {
-        return $this->client->getClientId();
+        return $this->client->getAuthClientId();
     }
 }
