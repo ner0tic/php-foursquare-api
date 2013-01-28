@@ -9,6 +9,7 @@ class Client extends BaseClient
     
     public function __constructor( Client $client = null )
     {
+        die ('before.');
         $this->client = $client instanceof Client ? $client : new Client();
 
         $this->setOption( 'url', 'https://api.foursquare.com/:path' );
