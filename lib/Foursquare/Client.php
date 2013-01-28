@@ -85,6 +85,6 @@ class Client extends BaseClient
       
       public function setOption( $name, $value )
       {
-          return $this->client->_httpClient->setOption( $name, $value );
+          return $this->client->getHttpClient()->setOption( $name, $value );
       }
   }
