@@ -11,13 +11,8 @@ class Client extends BaseClient
     {
         $this->client = $client instanceof Client ? $client : new Client();
 
-        $this->client->_httpClient->setOption( 'url', 'https://api.foursquare.com/:path' );
-        $this->client->_httpClient->setOption( 'certificate', false ); // 'Resources/config/certificate.pem' );
-        
-        parent::construct();
-        
-        var_dump($this->client);
-        die('...');
+        $this->setOption( 'url', 'https://api.foursquare.com/:path' );
+        $this->setOption( 'certificate', false ); // 'Resources/config/certificate.pem' );
     }
     
     /**
@@ -89,6 +84,6 @@ class Client extends BaseClient
       
       public function setOption( $name, $value )
       {
-          return parent::setOption( $name, $value );
+          return $this->client->setOption( $name, $value );
       }
   }
