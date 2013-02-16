@@ -25,7 +25,7 @@ class Users extends FoursquareApi
             return $this->get( 'users/' . parent::getAuthClientId() . '/checkins', $params, $requestOpts );      
         }
 
-        return $this->get( 'users/' . $id . '/checkins', params, $requestOpts );
+        return $this->get( 'users/' . $id . '/checkins', $params, $requestOpts );
     } 
 
     /**
