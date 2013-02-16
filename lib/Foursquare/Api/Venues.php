@@ -39,7 +39,7 @@ class Venues extends FoursquareApi
         
         foreach( $params as $key => $value )
         {
-            if( !in_array( $key, $search_fields ) )
+            if( !in_array( $key, $this->search_fields ) )
             {
                 unset( $params[ $key ] );
             }
@@ -51,7 +51,7 @@ class Venues extends FoursquareApi
             
             if( $key == 'intent' )
             {
-                if( !in_array( $params[ 'intent' ], $intents ) )
+                if( !in_array( $params[ 'intent' ], $this->intents ) )
                 {
                     new \Exception( 'Invalid intent supplied.' );
                 }
