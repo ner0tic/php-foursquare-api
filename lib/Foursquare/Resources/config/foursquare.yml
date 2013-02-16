@@ -1,2 +1,2 @@
-url: 'https://api.foursquare.com/:path'
+url: 'https://api.foursquare.com/v2/:path'
 certificate: false
