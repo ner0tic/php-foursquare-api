@@ -1,7 +1,7 @@
 <?php
 namespace Foursquare\Api;
 
-class Venue extends FoursquareApi
+class Venues extends FoursquareApi
 {
     public function getCategories( $id, $params = array(), $requestOpts = array() )
     {
