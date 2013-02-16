@@ -30,4 +30,9 @@ class FoursquareApi extends AbstractApi
     {
         return $this->client->api( $api );
     }
+    
+    public function authenticate( $login, $secret = null, $method = null )
+    {
+        return $this->client->authenticate( $login, $secrect, $method );
+    }
 }
