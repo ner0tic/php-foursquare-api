@@ -63,6 +63,6 @@ class Venues extends FoursquareApi
             }
         }
         
-        return $this->get( 'venues/search', array(), $params );
+        return $this->get( 'venues/search', $params );
     }
 }
