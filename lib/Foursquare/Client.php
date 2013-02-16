@@ -5,17 +5,6 @@ use Core\Client as BaseClient;
   
 class Client extends BaseClient 
 {
-    protected $client;
-    
-    public function __constructor( Client $client = null )
-    {
-        die ('before.');
-        $this->client = $client instanceof Client ? $client : new Client();
-
-        $this->setOption( 'url', 'https://api.foursquare.com/:path' );
-        $this->setOption( 'certificate', false ); // 'Resources/config/certificate.pem' );
-    }
-    
     /**
        * Api
        * @param string $name
@@ -81,10 +70,5 @@ class Client extends BaseClient
         }
         
         return $this->apis[ $name ];
-      }
-      
-      public function setOption( $name, $value )
-      {
-          return $this->client->_httpClient->setOption( $name, $value );
       }
   }

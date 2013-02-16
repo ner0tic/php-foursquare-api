@@ -9,29 +9,32 @@ class Users extends FoursquareApi
      * @param integer $limit
      * @return type
      */
-    public function getRecentCheckins( $id = null, $limit = 10 )
+    public function getRecentCheckins( $id = null, $params = array(), $requestOpts = array() )
     {
-        $requestOpts = array( 'limit' => $limit );
+        $params = array_merge( $params, array(
+            'limit' =>  10
+        ) );
+        
         if( null === $id )
         {
-            if( null === $this->getAuthClientId() )
+            if( null === parent::getAuthClientId() )
             {
-                return $this->get( 'users/self/checkins', $requestOpts );
+                new \Exception( 'You must supply a valid user id either via a config file or in the method call.' );
             }
 
-            return $this->get( 'users/'.$this->getAuthClientId().'/checkins', array(), $requestOpts );      
+            return $this->get( 'users/' . parent::getAuthClientId() . '/checkins', $params, $requestOpts );      
         }
 
-        return $this->get( 'users/'.$id.'/checkins', array(), $requestOpts );
-    }
+        return $this->get( 'users/' . $id . '/checkins', params, $requestOpts );
+    } 
 
     /**
      * Return most recent checkin to foursquare
      * @param integer $id the user id to get recent checkin from
      * @return type 
      */
-    public function getRecentCheckin($id = null)
+    public function getRecentCheckin( $id = null )
     {
-        return $this->getRecentCheckins($id, 1);
+        return $this->getRecentCheckins( $id, array( 'limit' => 1 ) );
     }
 }
