@@ -12,7 +12,7 @@ class FoursquareApi extends AbstractApi
     {
         $this->client = $client instanceof Client ? $client : new Client();
 
-        $this->client->setUrl( 'https://api.foursquare.com/:path' );
+        $this->client->setUrl( 'https://api.foursquare.com/v2/:path' );
         $this->client->getHttpClient()->setOption( 'certificate', false ); // 'Resources/config/certificate.pem' );
     }
     
