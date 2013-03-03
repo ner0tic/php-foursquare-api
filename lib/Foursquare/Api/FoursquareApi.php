@@ -1,10 +1,9 @@
 <?php
 namespace Foursquare\Api;
 
-use Core\Api\AbstractApi;
 use Foursquare\Client;
 
-class FoursquareApi extends AbstractApi
+class FoursquareApi extends Client
 {
     protected $client = null;
     
