@@ -64,7 +64,7 @@ class Client extends BaseClient
                     break;
                 default:
                     throw new \InvalidArgumentException();
-                    BREAK;
+                    break;
           }
           $this->apis[ $name ] = $api;
         }
