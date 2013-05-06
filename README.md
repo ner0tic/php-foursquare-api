@@ -2,23 +2,18 @@ php-foursquare-api
 ==================
 
 ORM agnostic php library to access foursquare api
+version 2.0
 
 Installation
 =============
 Add to composer
 ```js
     "require": {
-        "ner0tic/php-api-core":     "*",
-        "ner0tic/foursquare-api":   "*"
+        "ner0tic/php-api-core":     "2.*",
+        "ner0tic/foursquare-api":   "2.*"
         // ...
 ```
-Create your config file `app/config/foursquare.yml`
-```yaml
-url_token: XXXXXXXx
-http_password: XXXXXXXXXXX
-url_client_id: XXXXXXXXXXXXXXXXX
-http_token: XXXXXXXXXXXXXXXX
-```
+
 
 Usage
 =============
